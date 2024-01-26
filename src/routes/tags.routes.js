@@ -2,12 +2,12 @@ const { Router } = require('express');
 
 const TagsController = require('../controllers/TagsController');
 
-const notesRoutes = Router();
+const tagsRoutes = Router();
 
 const tagsController = new TagsController();
 
-notesRoutes.get('/', tagsController.index);
+tagsRoutes.get('/:user_id', tagsController.index);
 
 
 
-module.exports = notesRoutes;
+module.exports = tagsRoutes;
