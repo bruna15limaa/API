@@ -10,7 +10,7 @@ migrationsRun();
 const app = express();
 app.use(express.json());
 
-app.use("/files", express(uploadConfig));
+app.use("/files", express(uploadConfig.UPLOADS_FOLDER));
 
 app.use(routes);
 
